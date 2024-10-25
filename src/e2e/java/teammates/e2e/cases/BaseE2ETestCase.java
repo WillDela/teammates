@@ -2,6 +2,7 @@ package teammates.e2e.cases;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.UUID;
@@ -83,7 +84,7 @@ public abstract class BaseE2ETestCase extends BaseTestCaseWithDatabaseAccess {
     /**
      * Contains all the tests for the page.
      *
-     * <p>This approach is chosen so that setup and teardown are only needed once per test page,
+     * <p>This approach is chosen so that setup and tear down are only needed once per test page,
      * thereby saving time. While it necessitates failed tests to be restarted from the beginning,
      * test failures are rare and thus not causing significant overhead.
      */
@@ -172,7 +173,7 @@ public abstract class BaseE2ETestCase extends BaseTestCaseWithDatabaseAccess {
     }
 
     /**
-     * Deletes file with fileName from the downloads folder.
+     * Deletes file with fileName from the downloads' folder.
      */
     protected void deleteDownloadsFile(String fileName) {
         String filePath = TestProperties.TEST_DOWNLOADS_FOLDER + fileName;
@@ -185,11 +186,12 @@ public abstract class BaseE2ETestCase extends BaseTestCaseWithDatabaseAccess {
     protected void verifyDownloadedFile(String expectedFileName, List<String> expectedContent) {
         String filePath = TestProperties.TEST_DOWNLOADS_FOLDER + expectedFileName;
         int retryLimit = TestProperties.TEST_TIMEOUT;
-        boolean actual = Files.exists(Paths.get(filePath));
+        Path path = Paths.get(filePath);
+        boolean actual = Files.exists(path);
         while (!actual && retryLimit > 0) {
             retryLimit--;
             ThreadHelper.waitFor(1000);
-            actual = Files.exists(Paths.get(filePath));
+            actual = Files.exists(path);
         }
         assertTrue(actual);
 
@@ -355,7 +357,7 @@ public abstract class BaseE2ETestCase extends BaseTestCaseWithDatabaseAccess {
             BACKDOOR.removeAndRestoreDataBundle(testData);
             return true;
         } catch (HttpRequestFailedException e) {
-            e.printStackTrace();
+            e.printStackTrace(); //possible issue
             return false;
         }
     }
