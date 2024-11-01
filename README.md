@@ -1,4 +1,4 @@
-# TEAMMATES Developer Web Site
+# TEAMMATES Developer Web Site.
 
 [![GitHub Actions Build Status Component Tests](https://github.com/TEAMMATES/teammates/workflows/Component%20Tests/badge.svg)](https://github.com/TEAMMATES/teammates/actions)
 [![GitHub Actions Build Status E2E Tests](https://github.com/TEAMMATES/teammates/workflows/E2E%20Tests/badge.svg)](https://github.com/TEAMMATES/teammates/actions)
@@ -16,13 +16,13 @@ This is the developer web site for TEAMMATES. **Click [here](http://teammatesv4.
 [Version History](https://github.com/TEAMMATES/teammates/milestones?direction=desc&sort=due_date&state=closed) |
 [Project Stats](https://www.openhub.net/p/teammatesonline)
 
-## Interested to join TEAMMATES developer team?
+## Are you interested to join TEAMMATES developer team?
 
 We welcome contributions from developers, especially students. Here are some resources:
 * [**Contributor Orientation Guide**](https://teammates.github.io/teammates/contributing-doc.html): This document describes what you need to know/do to become a contributor.
 * [**Project ideas page**](https://github.com/TEAMMATES/teammates/wiki): These are for those who would like to do a relatively bigger projects with TEAMMATES (e.g. summer internships).
 
-## Acknowledgements
+## Acknowledgements:
 
 TEAMMATES team wishes to thank the following invaluable contributions:
 * [**School of Computing, National University of Singapore (NUS)**](http://www.comp.nus.edu.sg), for providing us with the infrastructure support to run the project.
@@ -34,7 +34,7 @@ TEAMMATES team wishes to thank the following invaluable contributions:
 * <img src="src/web/assets/images/yklogo.png" width="100"> [**YourKit LLC**](https://www.yourkit.com), for providing us with free licenses for the [YourKit Java Profiler](https://www.yourkit.com/java/profiler) (an industry leading profiler tool for Java applications).
 * <img src="src/web/assets/images/saucelabs.png" width="100"> [**SauceLabs**](https://saucelabs.com), for providing us with a free [Open Sauce account](https://saucelabs.com/open-source) for cross-browser testing.
 
-## Contacting us
+## Contact us:
 
 The best way to contact us is to [post a message in our issue tracker](https://github.com/TEAMMATES/teammates/issues/new). Our issue tracker doubles as a discussion forum. You can use it for things like asking questions about the project or requesting technical help.
 
